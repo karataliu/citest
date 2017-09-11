@@ -6,5 +6,5 @@ import (
 )
 
 func TestBasic(t *testing.T) {
-	assert.Equal(t, 1, 4)
+	assert.Equal(t, 1, 5)
 }
