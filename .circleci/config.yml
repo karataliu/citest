@@ -24,7 +24,5 @@ workflows:
   default:
     jobs:
       - unittest
-      - lint:
-          requires:
-          - unittest
+      - lint
   
