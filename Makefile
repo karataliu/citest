@@ -3,7 +3,7 @@
 
 SHELL=/bin/bash -o pipefail
 TEST_RESULTS_DIR=testResults
-GOMETALINTER_OPTION=--tests
+GOMETALINTER_OPTION=--tests -D gotype
 # -D deadcode -D gocyclo -D vetshadow -d
 
 test-unit:
