@@ -17,7 +17,7 @@ jobs:
           name: Code Lint
           command: |
             go get -u gopkg.in/alecthomas/gometalinter.v1
-            alias gometalinter=gometalinter.v1
+            ln -s /go/bin/gometalinter.v1 /go/bin/gometalinter
             gometalinter -i
             make test-lint
 workflows:
