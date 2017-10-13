@@ -10,5 +10,5 @@ func TestBasic(t *testing.T) {
 }
 
 func TestConst(t *testing.T) {
-	assert.Equal(t, 2, b1)
+	assert.True(t, b1 < 5)
 }
