@@ -15,7 +15,10 @@ jobs:
       - checkout
       - run:
           name: Code Lint
-          command: make test-lint
+          command: |
+            go get -u gopkg.in/alecthomas/gometalinter.v1
+            gometalinter.v1 -i
+            make test-lint
 workflows:
   version: 2
   default:
