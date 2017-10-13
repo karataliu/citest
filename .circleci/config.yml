@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  unittest:
+    docker:
+      - image: golang:1.8.3-jessie
+    working_directory: /go/src/github.com/karataliu/citest
+    steps:
+      - checkout
+      - run: make test-unit
+  lint:
+    docker:
+      - image: golang:1.8.3-jessie
+    working_directory: /go/src/github.com/karataliu/citest
+    steps:
+      - checkout
+      - run:
+          name: Code Lint
+          command: make test-lint
+workflows:
+  version: 2
+  default:
+    jobs:
+      - unittest
+      - lint:
+          requires:
+          - unittest
+  
