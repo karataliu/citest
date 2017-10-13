@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	b1 = 3
+	b1 = 4
 )
 
 // Run is ok
