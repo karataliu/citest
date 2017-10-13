@@ -8,3 +8,7 @@ import (
 func TestBasic(t *testing.T) {
 	assert.Equal(t, 1, 1)
 }
+
+func TestConst(t *testing.T) {
+	assert.Equal(t, 2, b1)
+}
